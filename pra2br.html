@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assista Agora</title>
+    <title>Apresentação exclusiva</title>
 
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
     <link rel="preload" href="https://scripts.converteai.net/88c2dd25-2774-43f4-a038-f2a84bb4bd89/players/69c5a3b796fd2c2d9b236afe/v4/player.js" as="script">
@@ -115,35 +115,6 @@
             padding-bottom: 1px;
         }
 
-        .cta-link {
-            background: linear-gradient(180deg, #e53935 0%, #c62828 100%);
-            color: #fff;
-            font-size: 17px;
-            font-weight: 600;
-            padding: 18px 50px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(229, 57, 53, 0.4);
-        }
-
-        .cta-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(229, 57, 53, 0.5);
-            background: linear-gradient(180deg, #ef5350 0%, #d32f2f 100%);
-        }
-
-        .cta-link .play-icon {
-            font-size: 14px;
-        }
-
         .site-footer {
             margin-top: 300px;
             padding: 24px 20px;
@@ -170,114 +141,4 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
-        .site-footer-nav .sep {
-            color: rgba(255, 255, 255, 0.12);
-            font-size: 10px;
-            user-select: none;
-        }
-
-        @media (max-width: 600px) {
-            .top-bar {
-                padding: 10px 15px;
-            }
-
-            .top-bar span {
-                font-size: 10px;
-                letter-spacing: 2px;
-            }
-
-            .hero-section {
-                padding: 28px 16px 40px;
-            }
-
-            .badge {
-                margin-bottom: 22px;
-            }
-
-            .player-wrapper {
-                border-radius: 12px;
-                margin-bottom: 28px;
-            }
-
-            .info-text {
-                font-size: 18px;
-                margin-bottom: 26px;
-            }
-
-            .cta-link {
-                font-size: 15px;
-                padding: 16px 35px;
-                width: 100%;
-                max-width: 340px;
-                justify-content: center;
-            }
-
-            .site-footer {
-                margin-top: 200px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="top-bar">
-        <span>Apresentação Exclusiva</span>
-    </div>
-
-    <section class="hero-section">
-        <div class="player-wrapper">
-            <vturb-smartplayer id="vid-69c5a3b796fd2c2d9b236afe" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
-        </div>
-
-        <div class="badge">
-            <span class="badge-dot"></span>
-            <span class="badge-text">Disponível agora</span>
-        </div>
-
-        <p class="info-text">Assista a apresentação exclusiva<br><strong>neste momento</strong></p>
-
-        <a href="/google2.html" class="cta-link" id="ctaButton">
-            <span class="play-icon">&#9654;</span>
-            ASSISTIR AGORA
-        </a>
-    </section>
-
-    <footer class="site-footer">
-        <nav class="site-footer-nav">
-            <a href="politica-privacidade.html">Privacidade</a>
-            <span class="sep">&middot;</span>
-            <a href="termos-uso.html">Termos</a>
-            <span class="sep">&middot;</span>
-            <a href="aviso-legal.html">Legal</a>
-            <span class="sep">&middot;</span>
-            <a href="politica-reembolso.html">Reembolso</a>
-        </nav>
-    </footer>
-
-    <script type="text/javascript">
-        var s = document.createElement("script");
-        s.src = "https://scripts.converteai.net/88c2dd25-2774-43f4-a038-f2a84bb4bd89/players/69c5a3b796fd2c2d9b236afe/v4/player.js";
-        s.async = !0;
-        document.head.appendChild(s);
-    </script>
-
-    <script>
-        (function() {
-            var currentParams = window.location.search;
-
-            if (currentParams) {
-                var ctaButton = document.getElementById('ctaButton');
-                var baseUrl = ctaButton.getAttribute('href');
-                ctaButton.setAttribute('href', baseUrl + currentParams);
-
-                var footerLinks = document.querySelectorAll('.site-footer-nav a');
-                footerLinks.forEach(function(link) {
-                    var linkHref = link.getAttribute('href');
-                    if (!linkHref.startsWith('http')) {
-                        link.setAttribute('href', linkHref + currentParams);
-                    }
-                });
-            }
-        })();
-    </script>
-</body>
-</html>
+        .site-footer-nav
